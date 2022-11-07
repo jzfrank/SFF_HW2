@@ -1,0 +1,97 @@
+% Q2
+warning("off", "all");
+loc = 1; scale = 2; df = 4; alpha = 0.01; % possibly new paramters 
+trueES = theoretical_ES_NCT(loc, scale, df, alpha);
+rep = 10; % parametric bootstrap mle is too slow
+for T=[250, 500, 2000]
+    [coverage_accuracy, avg_interval_length] = nonparametric_bootstrap(T, ...
+        rep, loc, scale, df, alpha, trueES);
+    ["nonparametric", T, coverage_accuracy, avg_interval_length]
+    [coverage_accuracy, avg_interval_length] = parametric_bootstrap(T, ...
+        rep, loc, scale, df, alpha, trueES);
+    ["parametric", T, coverage_accuracy, avg_interval_length]
+end
+
+function [coverage_accuracy, avg_interval_length] = parametric_bootstrap(...
+    T, rep, loc, scale, df, alpha, trueES)
+    B = 500; 
+    captures_trueES_cnt = 0;
+    interval_length = 0;
+    for i = 1:rep
+        data = loc + scale * trnd(df, T, 1);
+        ci = bootci(B, {@(data) ES_from_MLE(data, alpha, df, loc, scale), data},...
+            'Alpha', 0.1);
+        lower = ci(1);
+        upper = ci(2);
+        if (lower < trueES) && (trueES < upper)
+            captures_trueES_cnt = captures_trueES_cnt + 1;
+        end
+        interval_length = interval_length + (upper - lower);
+    end
+    coverage_accuracy = captures_trueES_cnt / rep;
+    avg_interval_length = interval_length / rep;
+end
+
+function [coverage_accuracy, avg_interval_length] = nonparametric_bootstrap(...
+    T, rep, loc, scale, df, alpha, trueES)
+    B = 500;
+    captures_trueES_cnt = 0;
+    interval_length = 0;
+    for i = 1:rep
+        data = loc + scale * trnd(df, T, 1);
+        ci = bootci(B, {@(data) empirical_ES(data, alpha), data},...
+            'Alpha', 0.1);
+        lower = ci(1);
+        upper = ci(2);
+        
+        if (lower < trueES) && (trueES < upper)
+            captures_trueES_cnt = captures_trueES_cnt + 1;
+        end
+        interval_length = interval_length + (upper - lower);
+    end
+    coverage_accuracy = captures_trueES_cnt / rep;
+    avg_interval_length = interval_length / rep;
+end
+
+function ES = ES_from_MLE(data, alpha, df, loc, scale)
+    % mle estimation is too slow, how to solve this issue? 
+%     tmp = mle(data, "Distribution", "tLocationScale");
+%     loc = tmp(1);
+%     scale = tmp(2);
+%     df = tmp(3);
+    tmp = tlikmax(data, [df, loc, scale]);
+    df = tmp(1);
+    loc = tmp(2);
+    scale = tmp(3);
+    ES = theoretical_ES(loc, scale, df, alpha);
+end
+
+function ES = theoretical_ES(loc, scale, df, alpha)
+    c01 = tinv(alpha , df); % left tail quantile, for loc-0 scale-1
+%     truec = loc+scale*c01; % left tail quantile c
+    ES01 = -tpdf(c01,df)/tcdf(c01,df) * (df+c01^2)/(df-1);
+    ES = loc+scale*ES01; % true theoretical ES
+end
+
+function ES = empirical_ES(data, alpha)
+    VaR = quantile(data, alpha);
+    tmp = data(data <= VaR);
+    ES = mean(tmp);
+end 
+
+function MLE = tlikmax(x, initvec)
+    tol = 1e-5;
+    opts = optimset('Disp', 'none', 'LargeScale', 'Off', ...
+        'TolFun', tol, 'TolX', tol, 'Maxiter', 200);
+    MLE = fminunc(@(param) tloglik(param, x), initvec, opts);
+end
+
+function ll = tloglik(param, x)
+    v = param(1); mu = param(2); c = param(3);
+    if v < 0, v = abs(v); end
+    if c < 0, c = abs(c); end
+    K = beta(v/2, 0.5) * sqrt(v); z = (x-mu) / c;
+    ll = -log(c) - log(K) - ((v+1)/2 * log(1 + (z.^2)/v));
+    ll = -sum(ll);
+end
+

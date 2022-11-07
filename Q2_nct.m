@@ -8,10 +8,14 @@ trueES_t = theoretical_ES_t(0, 1, df, alpha);
 % when mu = 0, nct should be same as t 
 disp([trueES_nct1, trueES_nct2, trueES_t]);
 % 
-rep = 6; % parametric bootstrap mle is too slow
-file_name = strcat('Q2_diary', '_rep', num2str(rep), '.txt');
+rep = 10; 
+
+file_name = strcat('Q2_diary', '_rep', num2str(rep), '_mu', num2str(mu), ...
+    '_df', num2str(df), '_alpha', num2str(alpha), ...
+     datestr(now,'_yyyy_mm-dd_HH:MM:SS'), '.txt');
 diary(file_name);
 disp(["rep", rep, "df", df, "mu", mu, "alpha", alpha]);
+
 for T=[250, 500, 2000]
     tic;
     [coverage_accuracy, avg_interval_length] = ...

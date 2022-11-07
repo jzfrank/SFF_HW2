@@ -9,7 +9,13 @@ trueES_t = theoretical_ES_t(0, 1, df, alpha);
 disp([trueES_nct1, trueES_nct2, trueES_t]);
 % 
 rep = 1; % parametric bootstrap mle is too slow
-disp(["rep", rep, "mu", mu]);
+
+file_name = strcat('Q4_diary', '_rep', num2str(rep), '_df', num2str(df), ...
+    '_mu', num2str(mu), '_alpha', num2str(alpha), ...
+     datestr(now,'_yyyy_mm-dd_HH:MM:SS'), '.txt');
+diary(file_name);
+
+disp(["rep", rep, "df", df, "mu", mu, "alpha", alpha]);
 for T=[250, 500, 2000]
     tic;
     [coverage_accuracy, avg_interval_length] = ...

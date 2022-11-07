@@ -136,3 +136,6 @@ In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('para
 In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Q2_nct', '/Users/jin/Documents/MATLAB/SFF_HW2/Q2_nct.m', 21)" style="font-weight:bold">Q2_nct</a> (<a href="matlab: opentoline('/Users/jin/Documents/MATLAB/SFF_HW2/Q2_nct.m',21,0)">line 21</a>)
         parametric_bootstrap_ES_nct_assume_t(T, rep, df, mu, alpha, trueES_nct1);
 } 
+Q4_nct
+  -12.5102  -12.5178   -5.2206
+

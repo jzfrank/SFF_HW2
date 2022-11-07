@@ -10,10 +10,12 @@ trueES_ss
 rep = 10; % parametric bootstrap mle is too slow
 disp(["rep", rep, "alpha_dist", alpha_dist]);
 for T=[250, 500, 2000]
+    tic;
     [coverage_accuracy, avg_interval_length] = ...
         nonparametric_bootstrap_ES_ss(T, rep, pd, alpha, trueES_ss);
     disp(["nonparametric", "T", T, coverage_accuracy, avg_interval_length]);
     [coverage_accuracy, avg_interval_length] = ...
         parametric_bootstrap_ES_ss(T, rep, pd, alpha, trueES_ss);
     disp(["parametric", "T", T, coverage_accuracy, avg_interval_length]);
+    toc;
 end

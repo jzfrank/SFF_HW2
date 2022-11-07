@@ -3,7 +3,7 @@ function [coverage_accuracy, avg_interval_length] = ...
     B = 500; 
     captures_trueES_cnt = 0;
     interval_length = 0;
-    for i = 1:rep
+    parfor i = 1:rep
         data = loc + scale * trnd(df, T, 1);
         ci = bootci(B, {@(data) ES_from_MLE_t(data, alpha), data},...
             'Alpha', 0.1);

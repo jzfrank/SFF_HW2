@@ -1,0 +1,18 @@
+    "rep"    "100"    "df"    "4"    "mu"    "-3"    "alpha"    "0.01"    "randSeed"    "default"
+
+    "nonparametric"    "T"    "250"    "0.5"    "7.4967"
+
+    "parametric"    "T"    "250"    "0.66"    "12.5923"
+
+Elapsed time is 87.935472 seconds.
+    "nonparametric"    "T"    "500"    "0.73"    "7.3585"
+
+    "parametric"    "T"    "500"    "0.56"    "7.2033"
+
+Elapsed time is 99.881308 seconds.
+    "nonparametric"    "T"    "2000"    "0.87"    "5.1059"
+
+    "parametric"    "T"    "2000"    "0.08"    "3.7102"
+
+Elapsed time is 167.261684 seconds.
+Q1_t

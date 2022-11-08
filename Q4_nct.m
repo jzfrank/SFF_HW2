@@ -1,5 +1,7 @@
 % Q4
 warning("off", "all");
+randSeed = "default";
+rng(randSeed);
 % loc = 1; scale = 2; 
 mu = -2; df = 4; alpha = 0.01; % possibly new paramters 
 trueES_nct1 = theoretical_ES_NCT_direct_integration(df, mu, alpha);
@@ -15,7 +17,7 @@ file_name = strcat('Q4_diary', '_rep', num2str(rep), '_df', num2str(df), ...
      datestr(now,'_yyyy_mm-dd_HH:MM:SS'), '.txt');
 diary(file_name);
 
-disp(["rep", rep, "df", df, "mu", mu, "alpha", alpha]);
+disp(["rep", rep, "df", df, "mu", mu, "alpha", alpha, "randSeed", randSeed]);
 for T=[250, 500, 2000]
     tic;
     [coverage_accuracy, avg_interval_length] = ...

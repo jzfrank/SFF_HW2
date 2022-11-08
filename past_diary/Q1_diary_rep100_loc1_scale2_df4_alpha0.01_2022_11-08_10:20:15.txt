@@ -1,0 +1,20 @@
+    "rep"    "100"    "loc"    "1"    "scale"    "2"    "df"    "4"    "alpha"    "0.01"
+
+    "nonparametric"    "T"    "250"    "0.61"    "5.7981"
+
+    "parametric"    "T"    "250"    "0.89"    "6.2748"
+
+Elapsed time is 71.975741 seconds.
+    "nonparametric"    "T"    "500"    "0.64"    "5.281"
+
+    "parametric"    "T"    "500"    "0.9"    "4.3786"
+
+Elapsed time is 77.738120 seconds.
+    "nonparametric"    "T"    "2000"    "0.84"    "3.1605"
+
+    "parametric"    "T"    "2000"    "0.86"    "2.1454"
+
+Elapsed time is 139.440266 seconds.
+Q2_nct
+   -5.2206   -5.2208   -5.2206
+

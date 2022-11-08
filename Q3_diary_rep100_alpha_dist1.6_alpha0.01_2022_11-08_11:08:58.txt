@@ -1,0 +1,24 @@
+    "rep"    "100"    "alpha_dist"    "1.6"    "alpha"    "0.01"    "randSeed"    "default"
+
+    "nonparametric"    "T"    "250"    "0.37"    "23.2981"
+
+    "parametric"    "T"    "250"    "0.48"    "10.4522"
+
+Elapsed time is 64.881676 seconds.
+    "nonparametric"    "T"    "500"    "0.54"    "16.5916"
+
+    "parametric"    "T"    "500"    "0.25"    "6.8717"
+
+Elapsed time is 69.413544 seconds.
+    "nonparametric"    "T"    "2000"    "0.71"    "16.8101"
+
+    "parametric"    "T"    "2000"    "0.02"    "3.4089"
+
+Elapsed time is 114.411275 seconds.
+Q3_symmetric_stable
+q= -4.2768
+
+trueES_ss =
+
+   -8.2805
+

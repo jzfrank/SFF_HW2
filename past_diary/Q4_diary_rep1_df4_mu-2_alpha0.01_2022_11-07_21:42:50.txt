@@ -15,3 +15,6 @@ Elapsed time is 118.459783 seconds.
     "parametric"    "T"    "2000"    "0"    "1.8837"
 
 Elapsed time is 290.376261 seconds.
+IdleTimeout has been reached.
+Parallel pool using the 'Processes' profile is shutting down.
+Q1_t

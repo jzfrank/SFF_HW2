@@ -15,3 +15,8 @@ Elapsed time is 78.895392 seconds.
     "parametric"    "T"    "2000"    "0.88"    "0.62216"
 
 Elapsed time is 121.408508 seconds.
+IdleTimeout has been reached.
+Parallel pool using the 'Processes' profile is shutting down.
+Q4_nct
+  -25.3988  -25.3827   -7.0031
+

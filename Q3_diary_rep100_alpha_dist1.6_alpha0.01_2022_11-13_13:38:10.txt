@@ -1,0 +1,25 @@
+    "rep"    "100"    "alpha_dist"    "1.6"    "alpha"    "0.01"    "randSeed"    "default"
+
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to the parallel pool (number of workers: 6).
+    "nonparametric"    "T"    "250"    "0.41"    "26.044"
+
+    "parametric"    "T"    "250"    "0.48"    "10.683"
+
+Elapsed time is 92.854991 seconds.
+    "nonparametric"    "T"    "500"    "0.55"    "29.0698"
+
+    "parametric"    "T"    "500"    "0.32"    "7.1689"
+
+Elapsed time is 114.436951 seconds.
+    "nonparametric"    "T"    "2000"    "0.58"    "12.8142"
+
+    "parametric"    "T"    "2000"    "0"    "3.4561"
+
+Elapsed time is 130.923194 seconds.
+q= -4.2768
+
+trueES_ss =
+
+   -8.2805
+

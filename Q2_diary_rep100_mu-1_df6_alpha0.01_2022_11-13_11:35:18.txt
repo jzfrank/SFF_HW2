@@ -1,0 +1,25 @@
+  Columns 1 through 13
+
+    "rep"    "100"    "df"    "6"    "mu"    "-1"    "alpha"    "0.01"    "loc"    "1"    "scale"    "2"    "randSeed"
+
+  Column 14
+
+    "default"
+
+    "nonparametric"    "T"    "100"    "0.28"    "3.6051"
+
+    "parametric"    "T"    "100"    "0.74"    "8.0578"
+
+Elapsed time is 102.286153 seconds.
+    "nonparametric"    "T"    "500"    "0.6"    "4.0779"
+
+    "parametric"    "T"    "500"    "0.4"    "2.8547"
+
+Elapsed time is 118.237245 seconds.
+    "nonparametric"    "T"    "2000"    "0.81"    "2.6382"
+
+    "parametric"    "T"    "2000"    "0.05"    "1.4465"
+
+Elapsed time is 158.719190 seconds.
+    "trueES_nct1"    "-7.0651"    "trueES_nct2"    "-7.0525"    "trueES_t"    "-7.0651"
+

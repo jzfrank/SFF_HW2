@@ -1,0 +1,37 @@
+    "rep"    "20"    "df"    "3"    "mu"    "-3"    "alpha"    "0.01"    "randSeed"    "default"
+
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to the parallel pool (number of workers: 6).
+    "nonparametric"    "T"    "100"    "0.25"    "16.7459"
+
+    "parametric"    "T"    "100"    "0"    "9.4558"
+
+Elapsed time is 244.300704 seconds.
+    "nonparametric"    "T"    "500"    "0.55"    "28.1646"
+
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('distcomp.remoteparfor/getCompleteIntervals')" style="font-weight:bold">distcomp.remoteparfor/getCompleteIntervals</a>
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel_function>distributed_execution', '/Applications/MATLAB_R2022b.app/toolbox/matlab/lang/parallel_function.m', 746)" style="font-weight:bold">parallel_function>distributed_execution</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2022b.app/toolbox/matlab/lang/parallel_function.m',746,0)">line 746</a>)
+        [tags, out] = P.getCompleteIntervals(chunkSize);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel_function', '/Applications/MATLAB_R2022b.app/toolbox/matlab/lang/parallel_function.m', 578)" style="font-weight:bold">parallel_function</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2022b.app/toolbox/matlab/lang/parallel_function.m',578,0)">line 578</a>)
+    R = distributed_execution(...
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('bootstrap_ES_general', '/Users/jin/Documents/MATLAB/SFF_HW2/bootstrap_ES_general.m', 5)" style="font-weight:bold">bootstrap_ES_general</a> (<a href="matlab: opentoline('/Users/jin/Documents/MATLAB/SFF_HW2/bootstrap_ES_general.m',5,0)">line 5</a>)
+    parfor i = 1:rep
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parametric_bootstrap_ES_nct_assume_nct', '/Users/jin/Documents/MATLAB/SFF_HW2/parametric_bootstrap_ES_nct_assume_nct.m', 6)" style="font-weight:bold">parametric_bootstrap_ES_nct_assume_nct</a> (<a href="matlab: opentoline('/Users/jin/Documents/MATLAB/SFF_HW2/parametric_bootstrap_ES_nct_assume_nct.m',6,0)">line 6</a>)
+    [coverage_accuracy, avg_interval_length] = bootstrap_ES_general(...
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Q4_nct', '/Users/jin/Documents/MATLAB/SFF_HW2/Q4_nct.m', 36)" style="font-weight:bold">Q4_nct</a> (<a href="matlab: opentoline('/Users/jin/Documents/MATLAB/SFF_HW2/Q4_nct.m',36,0)">line 36</a>)
+            parametric_bootstrap_ES_nct_assume_nct(T, rep, df, mu, loc, scale, alpha, trueES_nct1);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', '/Users/jin/Documents/MATLAB/SFF_HW2/main.m', 18)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('/Users/jin/Documents/MATLAB/SFF_HW2/main.m',18,0)">line 18</a>)
+        Q4_nct(df, mu);
+} 
+main
+    "trueES_nct1"    "-49.7976"    "trueES_nct2"    "-49.7655"    "trueES_t"    "-13.0062"
+
+  -49.7976  -49.7655  -13.0062
+

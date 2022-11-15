@@ -1,0 +1,52 @@
+  Columns 1 through 9
+
+    "rep"    "20"    "df"    "3"    "mu"    "-3"    "alpha"    "0.01"    "randSeed"
+
+  Column 10
+
+    "default"
+
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to the parallel pool (number of workers: 6).
+    "nonparametric"    "T"    "100"    "0.25"    "16.7523"
+
+Analyzing and transferring files to the workers ...done.
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('nctlikmax')" style="font-weight:bold">nctlikmax</a>
+An UndefinedFunction error was thrown on the workers for 'B'.  This might be because the file
+containing 'B' is not accessible on the workers. Use addAttachedFiles(pool, files) to specify
+the required files to be attached.  For more information, see the documentation for
+'parallel.Pool/addAttachedFiles'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ES_from_MLE_nct', '/Users/jin/Documents/MATLAB/SFF_HW2/ES_from_MLE_nct.m', 7)" style="font-weight:bold">ES_from_MLE_nct</a> (<a href="matlab: opentoline('/Users/jin/Documents/MATLAB/SFF_HW2/ES_from_MLE_nct.m',7,0)">line 7</a>)
+    tmp = nctlikmax(data, [4, -2, 1, 2]);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parametric_bootstrap_ES_nct_assume_nct>@(data)ES_from_MLE_nct(data,alpha,df,mu,loc,scale)', '/Users/jin/Documents/MATLAB/SFF_HW2/parametric_bootstrap_ES_nct_assume_nct.m', 5)" style="font-weight:bold">parametric_bootstrap_ES_nct_assume_nct>@(data)ES_from_MLE_nct(data,alpha,df,mu,loc,scale)</a> (<a href="matlab: opentoline('/Users/jin/Documents/MATLAB/SFF_HW2/parametric_bootstrap_ES_nct_assume_nct.m',5,0)">line 5</a>)
+    bootfunc = @(data) ES_from_MLE_nct(data, alpha, df, mu, loc, scale);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('bootstrap_ES_general>@(data)bootfunc(data)')" style="font-weight:bold">bootstrap_ES_general>@(data)bootfunc(data)</a>
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('bootstrp', '/Applications/MATLAB_R2022b.app/toolbox/stats/stats/bootstrp.m', 178)" style="font-weight:bold">bootstrp</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2022b.app/toolbox/stats/stats/bootstrp.m',178,0)">line 178</a>)
+    bootstat = feval(bootfun,bootargs{:});
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('bootstrap_ES_general', '/Users/jin/Documents/MATLAB/SFF_HW2/bootstrap_ES_general.m', 5)" style="font-weight:bold">bootstrap_ES_general</a> (<a href="matlab: opentoline('/Users/jin/Documents/MATLAB/SFF_HW2/bootstrap_ES_general.m',5,0)">line 5</a>)
+    parfor i = 1:rep
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parametric_bootstrap_ES_nct_assume_nct', '/Users/jin/Documents/MATLAB/SFF_HW2/parametric_bootstrap_ES_nct_assume_nct.m', 6)" style="font-weight:bold">parametric_bootstrap_ES_nct_assume_nct</a> (<a href="matlab: opentoline('/Users/jin/Documents/MATLAB/SFF_HW2/parametric_bootstrap_ES_nct_assume_nct.m',6,0)">line 6</a>)
+    [coverage_accuracy, avg_interval_length] = bootstrap_ES_general(...
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Q4_nct', '/Users/jin/Documents/MATLAB/SFF_HW2/Q4_nct.m', 36)" style="font-weight:bold">Q4_nct</a> (<a href="matlab: opentoline('/Users/jin/Documents/MATLAB/SFF_HW2/Q4_nct.m',36,0)">line 36</a>)
+            parametric_bootstrap_ES_nct_assume_nct(T, rep, df, mu, loc, scale, alpha, trueES_nct1);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', '/Users/jin/Documents/MATLAB/SFF_HW2/main.m', 18)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('/Users/jin/Documents/MATLAB/SFF_HW2/main.m',18,0)">line 18</a>)
+        Q4_nct(df, mu);
+
+Caused by:
+    Unable to evaluate BOOTFUN with the supplied arguments.
+    Unrecognized function or variable 'B'.
+        Unable to evaluate BOOTFUN with the supplied arguments.
+} 
+main
+    "trueES_nct1"    "-49.7976"    "trueES_nct2"    "-49.7655"    "trueES_t"    "-13.0062"
+
+  -49.7976  -49.7655  -13.0062
+

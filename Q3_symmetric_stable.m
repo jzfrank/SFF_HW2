@@ -1,9 +1,8 @@
 % Q3 symmetric stable (ss) 
 function Q3_symmetric_stable(alpha_dist)
+%     alpha_dist = 1.8; 
     warning("off", "all");
     randSeed = "default";
-    rng(randSeed);
-%     alpha_dist = 1.8; 
     pd = makedist('Stable','alpha', alpha_dist,'beta',0,'gam',1,'delta',0);
     alpha = 0.01; % possibly new paramters 
     trueES_ss = theoretical_ES_ss(pd, alpha_dist, alpha);
@@ -15,7 +14,7 @@ function Q3_symmetric_stable(alpha_dist)
         num2str(alpha_dist), "_alpha", num2str(alpha), ...
          datestr(now,'_yyyy_mm-dd_HH:MM:SS'), '.txt');
     diary(file_name);
-    disp(["rep", rep, "alpha_dist", alpha_dist, "alpha", alpha, "randSeed", randSeed]);
+    disp(["rep", rep, "alpha_dist", alpha_dist, "alpha", alpha]);
     
     for T=[250, 500, 2000]
         tic;

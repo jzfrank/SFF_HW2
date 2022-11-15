@@ -1,0 +1,11 @@
+    "rep"    "100"    "loc"    "1"    "scale"    "2"    "df"    "4"    "alpha"    "0.01"    "randSeed"    "default"
+
+    "nonparametric"    "T"    "250"    "0.47"    "5.5228"
+
+{<a href="matlab: opentoline('/Users/jin/Documents/MATLAB/SFF_HW2/parametric_bootstrap_ES_t.m',14,23)">File: parametric_bootstrap_ES_t.m Line: 14 Column: 23</a>
+Invalid expression. When calling a function or indexing a variable, use parentheses. Otherwise, check for mismatched delimiters.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Q1_t', '/Users/jin/Documents/MATLAB/SFF_HW2/Q1_t.m', 22)" style="font-weight:bold">Q1_t</a> (<a href="matlab: opentoline('/Users/jin/Documents/MATLAB/SFF_HW2/Q1_t.m',22,0)">line 22</a>)
+        [coverage_accuracy, avg_interval_length] = parametric_bootstrap_ES_t(T, ...
+} 
+Q1_t

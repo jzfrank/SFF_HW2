@@ -1,6 +1,6 @@
 function [coverage_accuracy, avg_interval_length] = ...
     bootstrap_ES_general(T, rep, trueES, data_generator, bootfunc)
-    B = 1000; 
+    B = 250; 
     CIs = zeros(rep, 2);
     parfor i = 1:rep
         data = data_generator(T);

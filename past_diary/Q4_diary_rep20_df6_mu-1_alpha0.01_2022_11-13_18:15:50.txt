@@ -1,0 +1,21 @@
+    "rep"    "20"    "df"    "6"    "mu"    "-1"    "alpha"    "0.01"    "randSeed"    "default"
+
+    "nonparametric"    "T"    "100"    "0.35"    "3.2126"
+
+    "parametric"    "T"    "100"    "0.7"    "9.9509"
+
+Elapsed time is 169.538258 seconds.
+    "nonparametric"    "T"    "500"    "0.8"    "4.4283"
+
+    "parametric"    "T"    "500"    "0.6"    "4.7189"
+
+Elapsed time is 233.238889 seconds.
+    "nonparametric"    "T"    "2000"    "0.85"    "2.6897"
+
+    "parametric"    "T"    "2000"    "0.6"    "3.8873"
+
+Elapsed time is 444.539138 seconds.
+    "trueES_nct1"    "-7.0651"    "trueES_nct2"    "-7.0525"    "trueES_t"    "-7.0651"
+
+   -7.0651   -7.0525   -7.0651
+

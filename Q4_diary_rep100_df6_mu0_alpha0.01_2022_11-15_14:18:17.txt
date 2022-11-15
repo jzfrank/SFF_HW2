@@ -1,0 +1,19 @@
+    "rep"    "100"    "df"    "6"    "mu"    "0"    "alpha"    "0.01"    "randSeed"    "default"
+
+    "nonparametric"    "T"    "100"    "0.26"    "2.9631"
+
+    "parametric"    "T"    "100"    "0.9"    "7.5946"
+
+Elapsed time is 9.202847 seconds.
+    "nonparametric"    "T"    "500"    "0.68"    "3.0175"
+
+    "parametric"    "T"    "500"    "1"    "6.4686"
+
+Elapsed time is 16.472592 seconds.
+    "nonparametric"    "T"    "2000"    "0.89"    "1.8048"
+
+    "parametric"    "T"    "2000"    "1"    "5.7367"
+
+Elapsed time is 50.964400 seconds.
+IdleTimeout has been reached.
+Parallel pool using the 'Processes' profile is shutting down.

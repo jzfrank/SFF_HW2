@@ -1,8 +1,6 @@
 % Q2
 function Q2_nct(df, mu)
     warning("off", "all");
-    randSeed = "default";
-    rng(randSeed);
     loc = 1; scale = 2; 
 %     mu = 0; df = 6; 
     alpha = 0.01; % possibly new paramters 
@@ -23,8 +21,7 @@ function Q2_nct(df, mu)
     diary(file_name);
     disp(["rep", rep, "df", df, ...
         "mu", mu, "alpha", alpha, ...
-        "loc", loc, "scale", scale, ...
-        "randSeed", randSeed]);
+        "loc", loc, "scale", scale]);
     disp("--------------------------");
     
     for T=[100, 500, 2000]

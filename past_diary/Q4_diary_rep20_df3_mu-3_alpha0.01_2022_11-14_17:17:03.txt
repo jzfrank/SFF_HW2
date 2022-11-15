@@ -1,0 +1,53 @@
+    "rep"    "20"    "df"    "3"    "mu"    "-3"    "alpha"    "0.01"    "randSeed"    "default"
+
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to the parallel pool (number of workers: 6).
+    "nonparametric"    "T"    "100"    "0.2"    "17.6023"
+
+Warning: Length of lower bounds is > length(x); ignoring extra bounds.
+Warning: Length of lower bounds is > length(x); ignoring extra bounds.
+> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('checkbounds', '/Applications/MATLAB_R2022b.app/toolbox/shared/optimlib/checkbounds.m', 27)" style="font-weight:bold">checkbounds</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2022b.app/toolbox/shared/optimlib/checkbounds.m',27,0)">line 27</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fmincon', '/Applications/MATLAB_R2022b.app/toolbox/shared/optimlib/fmincon.m', 339)" style="font-weight:bold">fmincon</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2022b.app/toolbox/shared/optimlib/fmincon.m',339,0)">line 339</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('nctlikmax', '/Users/jin/Documents/MATLAB/SFF_HW2/nctlikmax.m', 10)" style="font-weight:bold">nctlikmax</a> (<a href="matlab: opentoline('/Users/jin/Documents/MATLAB/SFF_HW2/nctlikmax.m',10,0)">line 10</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel_function>make_general_channel/channel_general', '/Applications/MATLAB_R2022b.app/toolbox/matlab/lang/parallel_function.m', 837)" style="font-weight:bold">parallel_function>make_general_channel/channel_general</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2022b.app/toolbox/matlab/lang/parallel_function.m',837,0)">line 837</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('remoteParallelFunction', '/Applications/MATLAB_R2022b.app/toolbox/parallel/remoteParallelFunction.m', 67)" style="font-weight:bold">remoteParallelFunction</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2022b.app/toolbox/parallel/remoteParallelFunction.m',67,0)">line 67</a>)
+Warning: Length of upper bounds is > length(x); ignoring extra bounds.
+> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('checkbounds', '/Applications/MATLAB_R2022b.app/toolbox/shared/optimlib/checkbounds.m', 41)" style="font-weight:bold">checkbounds</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2022b.app/toolbox/shared/optimlib/checkbounds.m',41,0)">line 41</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fmincon', '/Applications/MATLAB_R2022b.app/toolbox/shared/optimlib/fmincon.m', 339)" style="font-weight:bold">fmincon</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2022b.app/toolbox/shared/optimlib/fmincon.m',339,0)">line 339</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('nctlikmax', '/Users/jin/Documents/MATLAB/SFF_HW2/nctlikmax.m', 10)" style="font-weight:bold">nctlikmax</a> (<a href="matlab: opentoline('/Users/jin/Documents/MATLAB/SFF_HW2/nctlikmax.m',10,0)">line 10</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel_function>make_general_channel/channel_general', '/Applications/MATLAB_R2022b.app/toolbox/matlab/lang/parallel_function.m', 837)" style="font-weight:bold">parallel_function>make_general_channel/channel_general</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2022b.app/toolbox/matlab/lang/parallel_function.m',837,0)">line 837</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('remoteParallelFunction', '/Applications/MATLAB_R2022b.app/toolbox/parallel/remoteParallelFunction.m', 67)" style="font-weight:bold">remoteParallelFunction</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2022b.app/toolbox/parallel/remoteParallelFunction.m',67,0)">line 67</a>)
+Warning: Length of lower bounds is > length(x); ignoring extra bounds.
+Warning: Length of lower bounds is > length(x); ignoring extra bounds.
+Warning: Length of lower bounds is > length(x); ignoring extra bounds.
+Warning: Length of lower bounds is > length(x); ignoring extra bounds.
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('nctloglik')" style="font-weight:bold">nctloglik</a>
+Index exceeds the number of array elements. Index must not exceed 3.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('nctlikmax>@(param)nctloglik(param,x)', '/Users/jin/Documents/MATLAB/SFF_HW2/nctlikmax.m', 10)" style="font-weight:bold">nctlikmax>@(param)nctloglik(param,x)</a> (<a href="matlab: opentoline('/Users/jin/Documents/MATLAB/SFF_HW2/nctlikmax.m',10,0)">line 10</a>)
+    MLE = fmincon(@(param) nctloglik(param, x), initvec, ...
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fmincon', '/Applications/MATLAB_R2022b.app/toolbox/shared/optimlib/fmincon.m', 568)" style="font-weight:bold">fmincon</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2022b.app/toolbox/shared/optimlib/fmincon.m',568,0)">line 568</a>)
+      initVals.f = feval(funfcn{3},X,varargin{:});
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('nctlikmax', '/Users/jin/Documents/MATLAB/SFF_HW2/nctlikmax.m', 10)" style="font-weight:bold">nctlikmax</a> (<a href="matlab: opentoline('/Users/jin/Documents/MATLAB/SFF_HW2/nctlikmax.m',10,0)">line 10</a>)
+    MLE = fmincon(@(param) nctloglik(param, x), initvec, ...
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parametric_bootstrap_ES_nct_assume_nct', '/Users/jin/Documents/MATLAB/SFF_HW2/parametric_bootstrap_ES_nct_assume_nct.m', 6)" style="font-weight:bold">parametric_bootstrap_ES_nct_assume_nct</a> (<a href="matlab: opentoline('/Users/jin/Documents/MATLAB/SFF_HW2/parametric_bootstrap_ES_nct_assume_nct.m',6,0)">line 6</a>)
+    parfor i = 1:rep
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Q4_nct', '/Users/jin/Documents/MATLAB/SFF_HW2/Q4_nct.m', 36)" style="font-weight:bold">Q4_nct</a> (<a href="matlab: opentoline('/Users/jin/Documents/MATLAB/SFF_HW2/Q4_nct.m',36,0)">line 36</a>)
+            parametric_bootstrap_ES_nct_assume_nct(T, rep, df, mu, loc, scale, alpha, trueES_nct1);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', '/Users/jin/Documents/MATLAB/SFF_HW2/main.m', 18)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('/Users/jin/Documents/MATLAB/SFF_HW2/main.m',18,0)">line 18</a>)
+        Q4_nct(df, mu);
+
+Caused by:
+    Failure in initial objective function evaluation. FMINCON cannot continue.
+} 
+matlab.internal.language.introspective.errorDocCallback('nctloglik')
+main
+    "trueES_nct1"    "-49.7976"    "trueES_nct2"    "-49.7655"    "trueES_t"    "-13.0062"
+
+  -49.7976  -49.7655  -13.0062
+

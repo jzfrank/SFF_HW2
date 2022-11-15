@@ -1,0 +1,24 @@
+    "rep"    "10000"    "loc"    "1"    "scale"    "2"    "df"    "4"    "alpha"    "0.01"    "randSeed"    "default"
+
+    "nonparametric"    "T"    "250"    "0.5478"    "5.8096"
+
+    "parametric"    "T"    "250"    "0.978"    "129217900697885.6"
+
+Elapsed time is 134.152318 seconds.
+    "nonparametric"    "T"    "500"    "0.6788"    "5.1888"
+
+    "parametric"    "T"    "500"    "0.9966"    "16.029"
+
+Elapsed time is 228.741277 seconds.
+    "nonparametric"    "T"    "2000"    "0.8128"    "3.2288"
+
+    "parametric"    "T"    "2000"    "1"    "9.9867"
+
+Elapsed time is 879.725784 seconds.
+IdleTimeout has been reached.
+Parallel pool using the 'Processes' profile is shutting down.
+main
+    "trueES_nct1"    "-49.7976"    "trueES_nct2"    "-49.7655"    "trueES_t"    "-13.0062"
+
+  -49.7976  -49.7655  -13.0062
+

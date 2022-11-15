@@ -1,8 +1,6 @@
 % Q3 symmetric stable (ss) 
 function Q3_symmetric_stable(alpha_dist)
 %     alpha_dist = 1.8; 
-    warning("off", "all");
-    randSeed = "default";
     pd = makedist('Stable','alpha', alpha_dist,'beta',0,'gam',1,'delta',0);
     alpha = 0.01; % possibly new paramters 
     trueES_ss = theoretical_ES_ss(pd, alpha_dist, alpha);

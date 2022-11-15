@@ -1,0 +1,49 @@
+    "rep"    "10"    "df"    "3"    "mu"    "-3"    "alpha"    "0.01"
+
+    "nonparametric"    "T"    "100"    "0.6"    "34.7574"
+
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('distcomp.remoteparfor/getCompleteIntervals')" style="font-weight:bold">distcomp.remoteparfor/getCompleteIntervals</a>
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel_function>distributed_execution', '/Applications/MATLAB_R2022b.app/toolbox/matlab/lang/parallel_function.m', 746)" style="font-weight:bold">parallel_function>distributed_execution</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2022b.app/toolbox/matlab/lang/parallel_function.m',746,0)">line 746</a>)
+        [tags, out] = P.getCompleteIntervals(chunkSize);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parallel_function', '/Applications/MATLAB_R2022b.app/toolbox/matlab/lang/parallel_function.m', 578)" style="font-weight:bold">parallel_function</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2022b.app/toolbox/matlab/lang/parallel_function.m',578,0)">line 578</a>)
+    R = distributed_execution(...
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parametric_bootstrap_ES_nct_assume_nct', '/Users/jin/Documents/MATLAB/SFF_HW2/parametric_bootstrap_ES_nct_assume_nct.m', 15)" style="font-weight:bold">parametric_bootstrap_ES_nct_assume_nct</a> (<a href="matlab: opentoline('/Users/jin/Documents/MATLAB/SFF_HW2/parametric_bootstrap_ES_nct_assume_nct.m',15,0)">line 15</a>)
+        parfor j = 1:B
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Q4_nct', '/Users/jin/Documents/MATLAB/SFF_HW2/Q4_nct.m', 31)" style="font-weight:bold">Q4_nct</a> (<a href="matlab: opentoline('/Users/jin/Documents/MATLAB/SFF_HW2/Q4_nct.m',31,0)">line 31</a>)
+            parametric_bootstrap_ES_nct_assume_nct(T, rep, df, mu, loc, scale, alpha, trueES_nct1);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', '/Users/jin/Documents/MATLAB/SFF_HW2/main.m', 21)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('/Users/jin/Documents/MATLAB/SFF_HW2/main.m',21,0)">line 21</a>)
+Q4_nct(3, -3);
+} 
+java.lang.NullPointerException
+	at sun.reflect.UnsafeFieldAccessorImpl.ensureObj(UnsafeFieldAccessorImpl.java:57)
+	at sun.reflect.UnsafeObjectFieldAccessorImpl.get(UnsafeObjectFieldAccessorImpl.java:36)
+	at java.lang.reflect.Field.get(Field.java:393)
+	at sun.lwawt.macosx.CAccessibility.getAccessibleRoleFor(CAccessibility.java:248)
+	at sun.lwawt.macosx.CAccessibility$12.call(CAccessibility.java:263)
+	at sun.lwawt.macosx.CAccessibility$12.call(CAccessibility.java:260)
+	at sun.lwawt.macosx.LWCToolkit$CallableWrapper.run(LWCToolkit.java:597)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:301)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)

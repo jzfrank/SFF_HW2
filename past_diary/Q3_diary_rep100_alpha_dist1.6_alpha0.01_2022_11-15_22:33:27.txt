@@ -1,0 +1,30 @@
+    "rep"    "100"    "alpha_dist"    "1.6"    "alpha"    "0.01"
+
+    "nonparametric"    "T"    "250"    "0.42"    "14.2574"
+
+{Unrecognized function or variable 'df'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parametric_bootstrap_ES_ss', '/Users/jin/Documents/MATLAB/SFF_HW2/parametric_bootstrap_ES_ss.m', 9)" style="font-weight:bold">parametric_bootstrap_ES_ss</a> (<a href="matlab: opentoline('/Users/jin/Documents/MATLAB/SFF_HW2/parametric_bootstrap_ES_ss.m',9,0)">line 9</a>)
+        tmp = tlikmax(data, [df, loc, scale]);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Q3_symmetric_stable', '/Users/jin/Documents/MATLAB/SFF_HW2/Q3_symmetric_stable.m', 23)" style="font-weight:bold">Q3_symmetric_stable</a> (<a href="matlab: opentoline('/Users/jin/Documents/MATLAB/SFF_HW2/Q3_symmetric_stable.m',23,0)">line 23</a>)
+            parametric_bootstrap_ES_ss(T, rep, pd, alpha, trueES_ss);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', '/Users/jin/Documents/MATLAB/SFF_HW2/main.m', 14)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('/Users/jin/Documents/MATLAB/SFF_HW2/main.m',14,0)">line 14</a>)
+Q3_symmetric_stable(1.6);
+} 
+matlab.internal.language.introspective.errorDocCallback('parametric_bootstrap_ES_ss', '/Users/jin/Documents/MATLAB/SFF_HW2/parametric_bootstrap_ES_ss.m', 9)
+Q3_symmetric_stable
+{Not enough input arguments.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Q3_symmetric_stable', '/Users/jin/Documents/MATLAB/SFF_HW2/Q3_symmetric_stable.m', 4)" style="font-weight:bold">Q3_symmetric_stable</a> (<a href="matlab: opentoline('/Users/jin/Documents/MATLAB/SFF_HW2/Q3_symmetric_stable.m',4,0)">line 4</a>)
+    pd = makedist('Stable','alpha', alpha_dist,'beta',0,'gam',1,'delta',0);
+} 
+opentoline('/Users/jin/Documents/MATLAB/SFF_HW2/Q3_symmetric_stable.m',4,0)
+main
+q= -6.2841
+
+trueES_ss =
+
+  -15.8486
+

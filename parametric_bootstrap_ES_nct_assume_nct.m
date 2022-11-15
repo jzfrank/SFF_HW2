@@ -1,21 +1,27 @@
 function [coverage_accuracy, avg_interval_length] = ...
     parametric_bootstrap_ES_nct_assume_nct(T, rep, df, mu, loc, scale, alpha, trueES)
 
-
-%     method 2
     B = 250; 
     CIs = zeros(rep, 2);
-    parfor i = 1:rep
+    for i = 1:rep
         data = nct_rnd_simulate(df, mu, loc, scale, T, 1);
-        param = nctlikmax(data, [4, -2, 1, 2]);
-        df1=param(1); mu1= param(2); loc1=param(3); scale1=param(4);
-        simulated_data = nct_rnd_simulate(df1, mu1, loc1, scale1, B, T);
-        left_quantile = quantile(simulated_data, alpha, 2);
-        ind = (simulated_data < left_quantile);
-        ES_vec = mean(simulated_data(ind), 2);
+        % mle
+        param = nctlikmax(data, [df, mu, loc, scale]);
+        df_mle=param(1); mu_mle= param(2); loc_mle=param(3); scale_mle=param(4);
+        % simulate data based on fitted mle
+        simulated_data = nct_rnd_simulate(df_mle, mu_mle, loc_mle, scale_mle, B, T);
+        % fit mle based on simulated data
+        ES_vec = zeros(B, 1);
+        parfor j = 1:B
+            tmp = nctlikmax(simulated_data(j, :), [df, mu, loc, scale]);
+            df_mle1 = tmp(1);
+            mu_mle1 = tmp(2);
+            loc_mle1 = tmp(3);
+            scale_mle1 = tmp(4);
+            ES_vec(j) = theoretical_ES_NCT_from_simulation( ...
+                df_mle1, mu_mle1, loc_mle1, scale_mle1, alpha, 1e5); 
+        end
         ci = quantile(ES_vec, [0.05, 0.95]);
-        % using quantile for ci: 
-        % https://www.sciencedirect.com/topics/mathematics/bootstrap-confidence-interval
         CIs(i, :) = ci;
     end
     coverage_accuracy = mean( (CIs(:, 1) <= trueES) & (CIs(:, 2) >= trueES));

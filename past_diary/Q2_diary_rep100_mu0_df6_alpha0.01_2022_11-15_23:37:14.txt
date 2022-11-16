@@ -1,0 +1,30 @@
+    "rep"    "100"    "df"    "6"    "mu"    "0"    "alpha"    "0.01"    "loc"    "1"    "scale"    "2"
+
+--------------------------
+    "nonparametric"    "T"    "100"    "0.2"    "2.2932"
+
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fminusub')" style="font-weight:bold">fminusub</a>
+Objective function is undefined at initial point. Fminunc cannot continue.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fminunc', '/Applications/MATLAB_R2022b.app/toolbox/shared/optimlib/fminunc.m', 488)" style="font-weight:bold">fminunc</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2022b.app/toolbox/shared/optimlib/fminunc.m',488,0)">line 488</a>)
+   [x,FVAL,GRAD,HESSIAN,EXITFLAG,OUTPUT] = fminusub(funfcn,x, ...
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('tlikmax', '/Users/jin/Documents/MATLAB/SFF_HW2/tlikmax.m', 5)" style="font-weight:bold">tlikmax</a> (<a href="matlab: opentoline('/Users/jin/Documents/MATLAB/SFF_HW2/tlikmax.m',5,0)">line 5</a>)
+    MLE = fminunc(@(param) tloglik(param, x), initvec, opts);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('parametric_bootstrap_ES_nct_assume_t', '/Users/jin/Documents/MATLAB/SFF_HW2/parametric_bootstrap_ES_nct_assume_t.m', 17)" style="font-weight:bold">parametric_bootstrap_ES_nct_assume_t</a> (<a href="matlab: opentoline('/Users/jin/Documents/MATLAB/SFF_HW2/parametric_bootstrap_ES_nct_assume_t.m',17,0)">line 17</a>)
+        parfor j = 1:B
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Q2_nct', '/Users/jin/Documents/MATLAB/SFF_HW2/Q2_nct.m', 33)" style="font-weight:bold">Q2_nct</a> (<a href="matlab: opentoline('/Users/jin/Documents/MATLAB/SFF_HW2/Q2_nct.m',33,0)">line 33</a>)
+            parametric_bootstrap_ES_nct_assume_t(T, rep, df, mu, loc, scale, alpha, trueES_nct1);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', '/Users/jin/Documents/MATLAB/SFF_HW2/main.m', 8)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('/Users/jin/Documents/MATLAB/SFF_HW2/main.m',8,0)">line 8</a>)
+        Q2_nct(df, mu);
+} 
+opentoline('/Users/jin/Documents/MATLAB/SFF_HW2/parametric_bootstrap_ES_nct_assume_t.m',17,0)
+opentoline('/Applications/MATLAB_R2022b.app/toolbox/shared/optimlib/fminunc.m',488,0)
+opentoline('/Users/jin/Documents/MATLAB/SFF_HW2/tlikmax.m',5,0)
+main
+--------------------------
+    "trueES_nct1"    "-7.0651"    "trueES_nct2"    "-7.051"    "trueES_t"    "-7.0651"
+

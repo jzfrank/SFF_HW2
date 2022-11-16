@@ -15,7 +15,7 @@ function [coverage_accuracy, avg_interval_length] = ...
         % fit mle based on simulated data
         ES_vec = zeros(B, 1);
         parfor j = 1:B
-            tmp = tlikmax(simulated_data(j, :), [rand, rand, rand]);
+            tmp = tlikmax(simulated_data(j, :), [df, loc, scale]);
             df_mle1 = tmp(1);
             loc_mle1 = tmp(2);
             scale_mle1 = tmp(3);

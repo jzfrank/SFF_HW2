@@ -1,0 +1,21 @@
+    "rep"    "100"    "df"    "3"    "mu"    "0"    "alpha"    "0.01"    "loc"    "1"    "scale"    "2"
+
+--------------------------
+    "nonparametric"    "T"    "100"    "0.26"    "5.8703"
+
+    "parametric"    "T"    "100"    "0.82"    "20.6838"
+
+Elapsed time is 20.030390 seconds.
+    "nonparametric"    "T"    "500"    "0.58"    "9.332"
+
+    "parametric"    "T"    "500"    "0.86"    "7.3482"
+
+Elapsed time is 20.527852 seconds.
+    "nonparametric"    "T"    "2000"    "0.77"    "5.4176"
+
+    "parametric"    "T"    "2000"    "0.93"    "3.55"
+
+Elapsed time is 35.932664 seconds.
+--------------------------
+    "trueES_nct1"    "-21.8897"    "trueES_nct2"    "-21.8905"    "trueES_t"    "-7.0651"
+

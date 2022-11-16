@@ -1,0 +1,24 @@
+    "rep"    "100"    "loc"    "1"    "scale"    "2"    "df"    "4"    "alpha"    "0.01"
+
+    "nonparametric"    "T"    "250"    "coverage_accuracy"    "0.58"    "avg_interval_length"    "6.933"
+
+    "parametric"    "T"    "250"    "coverage_accuracy"    "0.9"    "avg_interval_length"    "6.2405"
+
+Elapsed time is 19.531362 seconds.
+    "nonparametric"    "T"    "500"    "coverage_accuracy"    "0.63"    "avg_interval_length"    "5.5554"
+
+    "parametric"    "T"    "500"    "coverage_accuracy"    "0.92"    "avg_interval_length"    "4.2399"
+
+Elapsed time is 20.905777 seconds.
+    "nonparametric"    "T"    "2000"    "coverage_accuracy"    "0.87"    "avg_interval_length"    "3.2502"
+
+    "parametric"    "T"    "2000"    "coverage_accuracy"    "0.94"    "avg_interval_length"    "2.1373"
+
+Elapsed time is 32.174844 seconds.
+main
+q= -6.2841
+
+trueES_ss =
+
+  -15.8486
+

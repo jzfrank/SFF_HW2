@@ -1,13 +1,13 @@
 % Q1
-Q1_t();
+% Q1_t();
 
 % % Q2
-% Q2_nct(3, -3);
-for df = [3, 6]
-    for mu = [-3, -2, -1, 0]
-        Q2_nct(df, mu);
-    end
-end
+% Q2_nct(6, 0);
+% for df = [3, 6]
+%     for mu = [-3, -2, -1, 0]
+%         Q2_nct(df, mu);
+%     end
+% end
 
 
 % % Q3

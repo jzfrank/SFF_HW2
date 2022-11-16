@@ -6,7 +6,7 @@ function [coverage_accuracy, avg_interval_length] = ...
     for i = 1:rep
         data = random(pd, [T, 1]);
         % mle
-        tmp = tlikmax(data, [4, 0, 1]);
+        tmp = tlikmax(data, [1, 1, 1]);
         df_mle = tmp(1);
         loc_mle = tmp(2);
         scale_mle = tmp(3);
@@ -14,8 +14,9 @@ function [coverage_accuracy, avg_interval_length] = ...
         simulated_data = loc_mle + scale_mle * trnd(df_mle, B, T);
         % fit mle based on simulated data
         ES_vec = zeros(B, 1);
+%         simulated_data
         parfor j = 1:B
-            tmp = tlikmax(simulated_data(j, :), [4, 0, 1]);
+            tmp = tlikmax(simulated_data(j, :), [1, 1, 1]);
             df_mle1 = tmp(1);
             loc_mle1 = tmp(2);
             scale_mle1 = tmp(3);

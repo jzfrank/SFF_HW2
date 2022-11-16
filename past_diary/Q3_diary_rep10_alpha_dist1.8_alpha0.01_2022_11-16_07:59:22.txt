@@ -1,0 +1,24 @@
+    "rep"    "10"    "alpha_dist"    "1.8"    "alpha"    "0.01"
+
+    "nonparametric"    "T"    "250"    "0.4"    "5.0665"
+
+    "parametric"    "T"    "250"    "0.3"    "3.5702"
+
+Elapsed time is 2.810772 seconds.
+    "nonparametric"    "T"    "500"    "0.4"    "3.9852"
+
+    "parametric"    "T"    "500"    "0.3"    "2.3321"
+
+Elapsed time is 2.557829 seconds.
+    "nonparametric"    "T"    "2000"    "0.5"    "3.7051"
+
+    "parametric"    "T"    "2000"    "0"    "1.237"
+
+Elapsed time is 3.585386 seconds.
+main
+q= -6.2841
+
+trueES_ss =
+
+  -15.8486
+

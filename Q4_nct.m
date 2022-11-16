@@ -14,7 +14,7 @@ function Q4_nct(df, mu)
     % when mu = 0, nct should be same as t 
     disp([trueES_nct1, trueES_nct2, trueES_t]);
     % 
-    rep = 10; % parametric bootstrap mle is too slow
+    rep = 1; % parametric bootstrap mle is too slow
     
     file_name = strcat('Q4_diary', '_rep', num2str(rep), '_df', num2str(df), ...
         '_mu', num2str(mu), '_alpha', num2str(alpha), ...
